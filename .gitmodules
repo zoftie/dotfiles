@@ -8,5 +8,5 @@
 	path = local/packages/tree-sitter
 	url = https://github.com/tree-sitter/tree-sitter.git
 [submodule "projects/SnekStudio"]
-	path = SnekStudio
+	path = projects/SnekStudio
 	url = https://github.com/ExpiredPopsicle/SnekStudio.git
