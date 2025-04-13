@@ -5,6 +5,11 @@
 
 (setq custom-file "~/.emacs.custom.el")
 
+(when (eq system-type 'darwin)
+  (let ((path (format "%s:%s" (getenv "PATH") "/opt/homebrew/bin")))
+    (setenv "PATH" path)))
+
+
 (progn
   (unless (package-installed-p 'use-package) (package-refresh-contents) (package-install 'use-package))
   (require 'package)
@@ -62,10 +67,15 @@
     (interactive)
     (find-file (format "%s%s" (getenv "HOME") "/.emacs")))
 
+  (defun project-switch-to-project ()
+    (interactive)
+    (setq project-switch-commands 'find-file-rg)
+    (call-interactively 'project-switch-project))
+
   (use-key "C-x f" 'find-file)
-  (use-key "C-x C-f" 'project-find-file)
   (use-key "C-x r" 'grep)
   (use-key "C-x C-r" 'project-find-regexp)
+  (use-key "C-x C-p" 'project-switch-to-project)
   (use-key "C-M-c" 'mc/mark-next-like-this)
   (use-key "C-M-i" 'xref-find-definitions)
   (use-key "C-v" 'emacs/emacs-scroll-down)
@@ -128,6 +138,9 @@
   (setopt
    completion-styles '(orderless basic)
    completion-category-overrides '((file (styles partial-completion)))))
+
+(use-package find-file-rg :ensure :config
+  (use-key "C-x C-f" 'find-file-rg))
 
 (use-package multiple-cursors :ensure :config
   (define-key mc/keymap (kbd "<return>") nil)
