@@ -29,18 +29,23 @@
   (toggle-frame-maximized)
   (when should-use-transparency
     (catppuccin-set-color 'base "#323232")
-    (set-frame-parameter nil 'alpha '(69 69))
+    (set-frame-parameter (selected-frame) 'alpha '(80 80))
     (catppuccin-reload)))
 
 (use-package emacs :ensure
   :config
-  (set-frame-font "Hack-18" nil t)
+  (set-frame-font "Hack-20" nil t)
 
-  (defun emacs/emacs-scroll-down () (interactive) (next-line 6))
-  (defun emacs/emacs-scroll-up () (interactive) (previous-line 6))
   (defun emacs/snippet () (interactive))
   (defun emacs/kill-all-buffers () (interactive)
     (mapcar 'kill-buffer (buffer-list)))
+
+  (defun emacs/emacs-scroll-down ()
+    (interactive)
+    (scroll-down (- 5)))
+  (defun emacs/emacs-scroll-up ()
+    (interactive)
+    (scroll-down 5))
 
   (setq emacs/setting-macro-status nil)
   (defun emacs/macro-start-end ()
@@ -59,7 +64,7 @@
     (find-file (format "%s%s" (getenv "HOME") "/.emacs.d/org/docket.org")))
 
   (defun org ()
-    "Jump to the org folder"
+    "Jump to the org folder"projects/SnekStudio/Build/
     (find-file (format "%s%s" (getenv "HOME") "/.emacs.d/org/")))
 
   (defun config ()
