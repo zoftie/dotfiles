@@ -198,3 +198,4 @@
     (use-key "C-c a" 'org-agenda)))
 
 (load custom-file)
+(docket)
