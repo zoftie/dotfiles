@@ -10,6 +10,9 @@
 
 !local/
 !local/packages/
+!local/packages/emacs
+!local/packages/blender
+!local/packages/homebrew
 
 !README.md
 

@@ -10,3 +10,6 @@
 [submodule "projects/SnekStudio"]
 	path = projects/SnekStudio
 	url = https://github.com/ExpiredPopsicle/SnekStudio.git
+[submodule "local/packages/blender"]
+	path = local/packages/blender
+	url = https://github.com/blender/blender.git
