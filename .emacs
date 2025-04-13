@@ -114,6 +114,10 @@
 
 (use-package magit :ensure
   :config
+  (require 'epa-file)
+  (custom-set-variables '(epg-gpg-program  "/usr/local/bin/gpg2"))
+  (epa-file-enable)
+
   (defun magit-show ()
     "Show the file changes by commit"
     (interactive)

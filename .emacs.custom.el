@@ -26,10 +26,11 @@
  '(lua-ts-indent-offset 2)
  '(menu-bar-mode nil)
  '(package-selected-packages
-    '(catppuccin-theme corfu csv-mode dashboard dracula-theme figlet
-       gdscript-mode geiser-guile go-mode gren-mode lua-mode magit
-       multiple-cursors nix-ts-mode orderless org-roam rainbow-mode
-       robe vertico web-mode xcscope))
+    '(catppuccin-theme corfu csv-mode dashboard dracula-theme epa-file
+       figlet find-file-rg gdscript-mode geiser-guile go-mode
+       gren-mode lua-mode magit multiple-cursors nix-ts-mode orderless
+       org-roam rainbow-mode robe vertico web-mode xcscope))
+ '(project-vc-merge-submodules nil)
  '(scroll-bar-mode nil)
  '(split-height-threshold nil)
  '(split-width-threshold nil)
