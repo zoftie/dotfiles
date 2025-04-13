@@ -1,0 +1,12 @@
+!.gitignore
+!.gitmodules
+
+!.emacs
+!.emacs.custom.el
+
+!local/
+!local/packages/
+
+!README.md
+
+.TRASH/

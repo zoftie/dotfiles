@@ -1,0 +1,12 @@
+[submodule "local/packages/emacs"]
+	path = local/packages/emacs
+	url = https://github.com/emacs-mirror/emacs.git
+[submodule "local/packages/autoconf"]
+	path = local/packages/autoconf
+	url = https://github.com/autotools-mirror/autoconf.git
+[submodule "local/packages/tree-sitter"]
+	path = local/packages/tree-sitter
+	url = https://github.com/tree-sitter/tree-sitter.git
+[submodule "SnekStudio"]
+	path = SnekStudio
+	url = https://github.com/ExpiredPopsicle/SnekStudio.git
