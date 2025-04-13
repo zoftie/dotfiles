@@ -10,6 +10,7 @@
  '(create-lockfiles nil)
  '(css-indent-offset 2)
  '(default-frame-alist '((vertical-scroll-bars)))
+ '(epg-gpg-program "/usr/local/bin/gpg2")
  '(global-display-line-numbers-mode t)
  '(global-whitespace-mode t)
  '(grep-command "rg -nS --no-heading ")
