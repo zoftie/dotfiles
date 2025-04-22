@@ -13,6 +13,7 @@
 !local/packages/emacs
 !local/packages/blender
 !local/packages/homebrew
+!local/packages/sbcl
 
 !README.md
 
