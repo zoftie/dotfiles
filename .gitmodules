@@ -10,6 +10,3 @@
 [submodule "local/packages/blender"]
 	path = local/packages/blender
 	url = https://github.com/blender/blender.git
-[submodule "local/packages/sbcl"]
-	path = local/packages/sbcl
-	url = git://git.code.sf.net/p/sbcl/sbcl

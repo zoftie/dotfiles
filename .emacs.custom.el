@@ -11,6 +11,7 @@
  '(css-indent-offset 2)
  '(default-frame-alist '((vertical-scroll-bars)))
  '(epg-gpg-program "/usr/local/bin/gpg2")
+ '(epg-pinentry-mode 'loopback)
  '(global-display-line-numbers-mode t)
  '(global-whitespace-mode t)
  '(grep-command "rg -nS --no-heading ")
@@ -28,15 +29,16 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
     '(catppuccin-theme corfu csv-mode dashboard dracula-theme epa-file
-       figlet find-file-rg gdscript-mode geiser-guile go-mode
-       gren-mode lua-mode magit multiple-cursors nix-ts-mode orderless
-       org-roam rainbow-mode robe vertico web-mode xcscope))
+       epg-pinentry-mode figlet find-file-rg gdscript-mode
+       geiser-guile go-mode gren-mode lua-mode magit multiple-cursors
+       nix-ts-mode orderless org-roam pinentry rainbow-mode robe
+       vertico web-mode xcscope))
  '(project-vc-merge-submodules nil)
  '(scroll-bar-mode nil)
  '(scroll-conservatively 10000)
- '(scroll-margin 1)
+ '(scroll-margin 8)
  '(scroll-preserve-screen-position t)
- '(scroll-step 1)
+ '(scroll-step 8)
  '(split-height-threshold nil)
  '(split-width-threshold nil)
  '(tool-bar-mode nil)

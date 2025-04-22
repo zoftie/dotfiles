@@ -6,8 +6,10 @@
 (setq custom-file "~/.emacs.custom.el")
 
 (when (eq system-type 'darwin)
-  (let ((path (format "%s:%s" (getenv "PATH") "/opt/homebrew/bin")))
-    (setenv "PATH" path)))
+  (let* ((home-brew-path "/opt/homebrew/bin")
+         (path (format "%s:%s" (getenv "PATH") home-brew-path)))
+    (setenv "PATH" path)
+    (setq exec-path (append exec-path (list home-brew-path)))))
 
 
 (progn
@@ -38,14 +40,15 @@
 
   (defun emacs/snippet () (interactive))
   (defun emacs/kill-all-buffers () (interactive)
-    (mapcar 'kill-buffer (buffer-list)))
+    (when nil
+      (mapcar 'kill-buffer (buffer-list))))
 
   (defun emacs/emacs-scroll-down ()
     (interactive)
-    (scroll-down (- 5)))
+    (next-line 5))
   (defun emacs/emacs-scroll-up ()
     (interactive)
-    (scroll-down 5))
+    (previous-line 5))
 
   (setq emacs/setting-macro-status nil)
   (defun emacs/macro-start-end ()
@@ -120,6 +123,7 @@
 
 (use-package magit :ensure
   :config
+
   (require 'epa-file)
   (custom-set-variables '(epg-gpg-program  "/usr/local/bin/gpg2"))
   (epa-file-enable)
