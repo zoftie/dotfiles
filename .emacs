@@ -92,7 +92,7 @@
   (use-key "M-@" 'kmacro-call-macro)
   (add-hook 'compilation-filter-hook 'ansi-color-compilation-filter)
 
-  (progn
+  (when (treesit-available-p)
     (setq treesit-language-source-alist '())
     (defmacro use-grammar (file-type url &optional branch folder) `(add-to-list 'treesit-language-source-alist '(,file-type ,url ,branch ,folder)))
     (use-grammar c "https://github.com/tree-sitter/tree-sitter-c")
@@ -115,7 +115,8 @@
     (use-grammar tsx "https://github.com/tree-sitter/tree-sitter-typescript" "master" "tsx/src")
     (use-grammar yaml "https://github.com/ikatyang/tree-sitter-yaml")
     (use-grammar gd "https://github.com/PrestonKnopp/tree-sitter-gdscript.git")
-    (add-hook 'c-mode-hook 'c-ts-mode)))
+    (add-hook 'c-mode-hook 'c-ts-mode))
+  )
 
 (use-package magit :ensure
   :config

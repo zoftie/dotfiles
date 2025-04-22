@@ -7,9 +7,9 @@
 [submodule "local/packages/tree-sitter"]
 	path = local/packages/tree-sitter
 	url = https://github.com/tree-sitter/tree-sitter.git
-[submodule "projects/SnekStudio"]
-	path = projects/SnekStudio
-	url = https://github.com/ExpiredPopsicle/SnekStudio.git
 [submodule "local/packages/blender"]
 	path = local/packages/blender
 	url = https://github.com/blender/blender.git
+[submodule "local/packages/sbcl"]
+	path = local/packages/sbcl
+	url = git://git.code.sf.net/p/sbcl/sbcl
