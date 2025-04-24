@@ -70,6 +70,11 @@
     "Jump to the org folder"projects/SnekStudio/Build/
     (find-file (format "%s%s" (getenv "HOME") "/.emacs.d/org/")))
 
+  (defun notes ()
+    (interactive)
+    (when (vc-root-dir)
+      (find-file (format "%snotes.org" (vc-root-dir)))))
+
   (defun config ()
     "Jump to this file!"
     (interactive)
@@ -201,6 +206,11 @@
       org-hide-leading-stars t
       org-list-allow-alphabetical t)
     (use-key "C-c a" 'org-agenda)))
+
+(use-package slime :ensure
+  :config
+  (setq sbcl-location (format "%s/%s" (getenv "HOME") "bin/sbcl"))
+  (setq inferior-lisp-program sbcl-location))
 
 (load custom-file)
 (docket)

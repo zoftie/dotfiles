@@ -31,7 +31,7 @@
     '(catppuccin-theme corfu csv-mode dashboard dracula-theme epa-file
        epg-pinentry-mode figlet find-file-rg gdscript-mode
        geiser-guile go-mode gren-mode lua-mode magit multiple-cursors
-       nix-ts-mode orderless org-roam pinentry rainbow-mode robe
+       nix-ts-mode orderless org-roam pinentry rainbow-mode robe slime
        vertico web-mode xcscope))
  '(project-vc-merge-submodules nil)
  '(scroll-bar-mode nil)
